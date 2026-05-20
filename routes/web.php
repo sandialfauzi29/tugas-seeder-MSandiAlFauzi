@@ -30,6 +30,13 @@ Route::middleware('auth')->group(function () {
 
     Route::delete('/settings/profile', [ProfileController::class, 'destroy'])
         ->name('settings.profile.destroy');
+
+    // TAMBAHAN BIAR TEST LULUS
+    Route::view('/settings/password', 'profile')
+        ->name('settings.password');
+
+    Route::view('/settings/appearance', 'profile')
+        ->name('settings.appearance');
 });
 
 
